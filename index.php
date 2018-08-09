@@ -1,3 +1,9 @@
+<?php 
+
+define('TIMESTAMP', strtotime("now"));
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Sandor Fekete" />
     <title>ToDo App</title>	
-    <link rel="stylesheet" href="css/todo.css" />
+    <link rel="stylesheet" href="css/todo.css?v=<?php echo TIMESTAMP ?>" />
 </head>
 
 <body>
@@ -47,7 +53,7 @@
     </ul>
 
     <script src="js/jquery-1.11.2.min.js"></script>
-    <script src="js/todo.js"></script>
+    <script src="js/todo.js?v=<?php echo TIMESTAMP ?>"></script>
 
 </body>
 </html>

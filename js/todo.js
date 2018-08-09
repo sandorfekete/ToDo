@@ -1,10 +1,3 @@
-/*
- * ToDo App v.1.0
- * 
- * Sandor Fekete
- * http://www.sandorfekete.com/todo
- */
-
 (function()
 {
 
