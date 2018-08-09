@@ -1,0 +1,212 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	line-height: 1em;
+	box-sizing: border-box;
+}
+
+body
+{
+	background: #ededed;
+	padding: 24px;
+}
+
+#todo
+{
+	font-family: Verdana;
+	width: 600px;
+	padding: 24px;
+	margin: 0 auto;
+	border: 1px solid silver;
+	border-radius: 5px;
+	background: white;
+	box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+}
+
+#todo h1 { margin-bottom: 24px; color: gray; }
+
+#todo hr
+{
+	border: none;
+	border-top: 1px dashed silver;
+	margin: 24px -24px;
+}
+
+#todo .button
+{
+	display: inline-block;
+	padding: 8px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	background: #ededed;
+	font-size: 12px;
+	color: gray;
+	text-align: center;
+	cursor: pointer;
+}
+
+	#todo .button:hover,
+	#todo .button.active
+	{	
+		background: #006699;
+		border: 1px solid #006699;
+		color: white;
+	}
+	
+#todo ul
+{
+	width: 100%;
+	position: relative;	
+	list-style: none;
+	margin-top: 24px;
+}
+
+	#todo li
+	{
+		position: relative;
+		height: 40px;
+	}
+	
+ul.instructions
+{
+	width: 300px;
+	margin: 24px auto;
+	color: gray;
+	list-style: none;
+}
+	
+#todo .new
+{
+	height: 32px;
+	padding: 0 8px;
+	font-family: 'Courier';
+	font-size: 24px;
+	color: black;
+	height: auto;
+	width: 100%;
+	border: 1px solid silver;
+	padding: 12px 10px;
+}
+
+	#todo .new::-webkit-input-placeholder { font-style: italic; color: silver; }
+	#todo .new::-moz-placeholder { font-style: italic; color: silver; }
+	#todo .new:-ms-input-placeholder { font-style: italic; color: silver; }
+
+#todo .check
+{
+	-ms-transform: scale(2);
+	-moz-transform: scale(2);
+	-webkit-transform: scale(2);
+	-o-transform: scale(2);
+	padding: 10px;
+	
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	z-index: 100;
+}
+
+#todo .item
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-top: 0;
+	padding-left: 48px;
+	font-family: Verdana;
+	font-size: 20px;
+	position: absolute;
+	z-index: 10;
+	cursor: default;
+}
+
+	#todo label.item
+	{
+		padding-top: 8px;
+		padding-left: 48px;
+	}
+
+	#todo input.item
+	{
+		display: none;
+		border: 2px solid #006699;
+		color: #006699;
+	}
+
+		#todo li.completed label.item
+		{
+			text-decoration: line-through;
+			color: silver;
+		}
+
+		#todo input.item
+		{
+			cursor: auto;
+		}
+	
+
+#todo li .remove
+{
+	width: 24px;
+	height: 24px;
+	padding: 4px;
+	position: absolute;
+	visibility: hidden;
+	top: 8px;
+	right: 8px;
+	z-index: 200;
+}
+
+	#todo li .remove:hover
+	{
+		background: red;
+		color: white;
+		border: 1px solid red;		
+	}
+	
+	#todo li:hover .remove
+	{
+		visibility: visible;
+	}
+
+
+#todo .table
+{
+	width: 100%;
+	display: table;
+}
+
+	#todo .table-row
+	{
+		display: table-row;
+	}
+
+		#todo .table-cell
+		{
+			display: table-cell;
+			text-align: center;
+		}
+		
+			#todo .table-cell:first-child
+			{
+				text-align: left;
+				width: 30%;
+			}
+		
+			#todo .table-cell:last-child
+			{
+				text-align: right;
+				width: 25%;
+			}
+			
+			
+#todo .count
+{
+	font-size: 14px;
+}
+
+	#todo .count span
+	{
+		font-weight: bold;
+	}
